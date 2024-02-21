@@ -41,6 +41,22 @@ radiologia.shift(); // Elimina el primer elemento
 radiologia.pop();   // Elimina el último elemento
 
 
+// Título "Consulta Dental"
+document.write('<h4>Lista Consulta Dental:</h4>');
+
+// Imprimir la lista de consultas médicas de Dental utilizando forEach()
+document.write('<p>');
+dental.forEach(function(consulta, index) {
+    var linea = `${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}`;
+    document.write(linea);
+    if (index !== dental.length - 1) {
+        document.write('<br>');
+    }
+});
+document.write('</p>');
+
+
+
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
