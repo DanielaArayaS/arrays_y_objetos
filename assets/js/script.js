@@ -43,8 +43,7 @@ radiologia.pop();   // Elimina el último elemento
 
 // Título "Consulta Dental"
 document.write('<h4>Lista Consulta Dental:</h4>');
-
-// Imprimir la lista de consultas médicas de Dental utilizando forEach()
+// Imprimir la lista de consultas médicas de Dental
 document.write('<p>');
 dental.forEach(function(consulta, index) {
     var linea = `${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}`;
@@ -54,6 +53,27 @@ dental.forEach(function(consulta, index) {
     }
 });
 document.write('</p>');
+
+
+// Recopilación de pacientes y su previsión de los arreglos radiologia, traumatologia y dental
+var pacientesTotal = [];
+radiologia.forEach(function(consulta) {
+    pacientesTotal.push({paciente: consulta.paciente, prevision: consulta.prevision});
+});
+traumatologia.forEach(function(consulta) {
+    pacientesTotal.push({paciente: consulta.paciente, prevision: consulta.prevision});
+});
+dental.forEach(function(consulta) {
+    pacientesTotal.push({paciente: consulta.paciente, prevision: consulta.prevision});
+});
+
+// Imprimir el listado total de pacientes y sus previsiones
+document.write('<h2>Listado Total de Pacientes</h2>');
+document.write('<ul>');
+pacientesTotal.forEach(function(paciente) {
+    document.write(`<li>${paciente.paciente} - ${paciente.prevision}</li>`);
+});
+document.write('</ul>');
 
 
 
