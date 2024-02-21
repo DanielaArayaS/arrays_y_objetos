@@ -66,7 +66,6 @@ traumatologia.forEach(function(consulta) {
 dental.forEach(function(consulta) {
     pacientesTotal.push({paciente: consulta.paciente, prevision: consulta.prevision});
 });
-
 // Imprimir el listado total de pacientes y sus previsiones
 document.write('<h3>Listado Total de Pacientes</h3>');
 document.write('<ul>');
@@ -80,7 +79,6 @@ document.write('</ul>');
 let pacientesIsapre = dental.filter(function(consulta) {
     return consulta.prevision === 'ISAPRE';
 });
-
 // Imprimir el listado de pacientes de Dental con previsión ISAPRE
 document.write('<h3>Pacientes de Dental con Previsión ISAPRE</h3>');
 document.write('<ul>');
@@ -90,6 +88,17 @@ pacientesIsapre.forEach(function(consulta) {
 document.write('</ul>');
 
 
+// Filtrar los pacientes de Traumatología con previsión FONASA
+let pacientesFonasa = traumatologia.filter(function(consulta) {
+    return consulta.prevision === 'FONASA';
+});
+// Imprimir el listado de pacientes de Traumatología con previsión FONASA
+document.write('<h3>Pacientes de Traumatología con Previsión FONASA</h3>');
+document.write('<ul>');
+pacientesFonasa.forEach(function(consulta) {
+    document.write(`<li>${consulta.paciente} - ${consulta.prevision}</li>`);
+});
+document.write('</ul>');
 
 
 
