@@ -27,6 +27,14 @@ var dental = [
     {hora: '14:00', especialista: 'RAQUEL VILLASECA',       paciente: 'ANA SEPULVEDA',  rut: '14441281-0', prevision: 'ISAPRE'},
 ];
 
+// Nuevas horas al arreglo de Traumatología
+traumatologia.push(
+    {hora: '09:00', especialista: 'René Poblete', paciente: 'Ana Gellona', rut: '13123329-7', prevision: 'ISAPRE'},
+    {hora: '09:30', especialista: 'Maria Solar', paciente: 'Ramiro Andrade', rut: '12221451-K', prevision: 'FONASA'},
+    {hora: '10:00', especialista: 'Raul Loyola', paciente: 'Carmen Isla', rut: '10112348-3', prevision: 'ISAPRE'},
+    {hora: '10:30', especialista: 'Antonio Larenas', paciente: 'Pablo Loayza', rut: '13453234-1', prevision: 'ISAPRE'},
+    {hora: '12:00', especialista: 'Matias Aravena', paciente: 'Susana Poblete', rut: '14345656-6', prevision: 'FONASA'}
+);
 
 
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
