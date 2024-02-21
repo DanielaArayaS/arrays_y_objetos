@@ -36,6 +36,10 @@ traumatologia.push(
     {hora: '12:00', especialista: 'Matias Aravena', paciente: 'Susana Poblete', rut: '14345656-6', prevision: 'FONASA'}
 );
 
+// Elimina el primer y último elemento del arreglo de Radiología
+radiologia.shift(); // Elimina el primer elemento
+radiologia.pop();   // Elimina el último elemento
+
 
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
