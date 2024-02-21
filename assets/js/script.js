@@ -42,7 +42,7 @@ radiologia.pop();   // Elimina el último elemento
 
 
 // Título "Consulta Dental"
-document.write('<h4>Lista Consulta Dental:</h4>');
+document.write('<h3>Lista Consulta Dental:</h3>');
 // Imprimir la lista de consultas médicas de Dental
 document.write('<p>');
 dental.forEach(function(consulta, index) {
@@ -56,7 +56,7 @@ document.write('</p>');
 
 
 // Recopilación de pacientes y su previsión de los arreglos radiologia, traumatologia y dental
-var pacientesTotal = [];
+let pacientesTotal = [];
 radiologia.forEach(function(consulta) {
     pacientesTotal.push({paciente: consulta.paciente, prevision: consulta.prevision});
 });
@@ -68,12 +68,28 @@ dental.forEach(function(consulta) {
 });
 
 // Imprimir el listado total de pacientes y sus previsiones
-document.write('<h2>Listado Total de Pacientes</h2>');
+document.write('<h3>Listado Total de Pacientes</h3>');
 document.write('<ul>');
 pacientesTotal.forEach(function(paciente) {
     document.write(`<li>${paciente.paciente} - ${paciente.prevision}</li>`);
 });
 document.write('</ul>');
+
+
+// Filtrar los pacientes de Dental con previsión ISAPRE
+let pacientesIsapre = dental.filter(function(consulta) {
+    return consulta.prevision === 'ISAPRE';
+});
+
+// Imprimir el listado de pacientes de Dental con previsión ISAPRE
+document.write('<h3>Pacientes de Dental con Previsión ISAPRE</h3>');
+document.write('<ul>');
+pacientesIsapre.forEach(function(consulta) {
+    document.write(`<li>${consulta.paciente} - ${consulta.prevision}</li>`);
+});
+document.write('</ul>');
+
+
 
 
 
